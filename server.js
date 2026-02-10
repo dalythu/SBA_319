@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import { logReq, globalErr } from './middleware/middlewares.js'
 import connectDB from './db/conn.js'
 import animalRoutes from './routes/animalRoutes.js'
+import exhibitRoutes from './routes/exhibitRoutes.js'
+import employeeRoutes from './routes/employeeRoutes.js'
 
 // Setups
 dotenv.config()
@@ -17,6 +19,8 @@ app.use(logReq)
 
 // Route
 app.use('/api/animal', animalRoutes)
+app.use('/api/exhibit', exhibitRoutes)
+app.use('/api/employee', employeeRoutes)
 
 // Global Err
 app.use(globalErr)
