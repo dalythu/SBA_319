@@ -11,4 +11,6 @@ const employeeSchema = new mongoose.Schema({
   },
 })
 
+employeeSchema.index({ role: 1, shift: 1 })
+
 export default mongoose.model('Employee', employeeSchema)

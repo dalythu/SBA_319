@@ -7,4 +7,6 @@ const exhibitSchema = new mongoose.Schema({
   isIndoor: { type: Boolean, default: false },
 })
 
+exhibitSchema.index({ habitatType: 1, isIndoor: 1 })
+
 export default mongoose.model('Exhibit', exhibitSchema)

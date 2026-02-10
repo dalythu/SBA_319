@@ -8,4 +8,6 @@ const animalSchema = new mongoose.Schema({
   isEndangered: { type: Boolean, default: false },
 })
 
+animalSchema.index({ species: 1, isEndangered: 1 })
+
 export default mongoose.model('Animal', animalSchema)
